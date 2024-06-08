@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster List</title>
+</head>
+<body>
+    <h1>Disaster List</h1>
+    <ul>
+    {% for disaster in disasters %}
+        <li><a href="{% url 'disaster_detail' disaster.pk %}">{{ disaster }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
